@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package stroeer.page.section.config.v1;
+
+option go_package = "github.com/stroeer/tapir/go/stroeer/page/section/config/v1;section";
+option java_multiple_files = true;
+option java_package = "de.stroeer.page.section.config.v1";
+
+message StageDataConfig {
+  StageDataKey key = 1;
+  int64 priority = 2;
+}
+
+message StageDataKey {
+  StageDataSource source = 1;
+  string id = 2;
+
+}
+
+enum StageDataSource {
+  CURATION = 0;
+  SEARCH = 1;
+}

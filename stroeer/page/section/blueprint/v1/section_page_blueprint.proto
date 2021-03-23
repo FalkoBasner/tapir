@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package stroeer.page.section.config.v1;
+
+import "stroeer/core/v1/shared.proto";
+import "stroeer/page/section/blueprint/v1/stage_blueprint.proto";
+
+option go_package = "github.com/stroeer/tapir/go/stroeer/page/section/blueprint/v1;section";
+option java_multiple_files = true;
+option java_package = "de.stroeer.page.section.blueprint.v1";
+
+message SectionPageBlueprint {
+  stroeer.core.v1.Reference section_tree = 1;
+  repeated StageBlueprint stages = 2;
+}

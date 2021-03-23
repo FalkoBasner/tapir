@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package stroeer.page.section.config.v1;
+
+import "stroeer/core/v1/shared.proto";
+import "stroeer/page/section/v1/section_page.proto";
+
+import "stroeer/page/section/blueprint/v1/stage_data_config.proto";
+import "stroeer/page/section/blueprint/v1/teaser_blueprint.proto";
+import "stroeer/page/section/blueprint/v1/commercial_blueprint.proto";
+
+option go_package = "github.com/stroeer/tapir/go/stroeer/page/section/blueprint/v1;section";
+option java_multiple_files = true;
+option java_package = "de.stroeer.page.section.blueprint.v1";
+
+message StageBlueprint {
+  string stage_id = 1;
+  repeated StageDataConfig data_configs = 2;
+  stroeer.page.section.v1.StageItemWidth width = 3;
+  StageLayout layout = 4;
+  repeated stroeer.core.v1.Reference references = 5;
+  repeated TeaserBlueprint teasers = 6;
+  repeated CommercialBlueprint commercials = 7;
+  repeated StageBlueprint children = 8;
+}
+
+enum StageLayout {
+  DEFAULT = 0;
+  STREAM = 1;
+  COMPANION = 2;
+  SCHLAGZEILEN = 3;
+}
