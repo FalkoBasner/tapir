@@ -20,6 +20,11 @@ const _ = grpc.SupportPackageIsVersion7
 type SectionPageServiceClient interface {
 	//*
 	//############################################################################
+	//# Description
+	//############################################################################
+	//Fetch section data for a given section path.
+	//
+	//############################################################################
 	//# Status/Error scenario's
 	//############################################################################
 	//
@@ -91,6 +96,11 @@ func (c *sectionPageServiceClient) GetSectionPage(ctx context.Context, in *GetSe
 // for forward compatibility
 type SectionPageServiceServer interface {
 	//*
+	//############################################################################
+	//# Description
+	//############################################################################
+	//Fetch section data for a given section path.
+	//
 	//############################################################################
 	//# Status/Error scenario's
 	//############################################################################

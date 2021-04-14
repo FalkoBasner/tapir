@@ -10,7 +10,11 @@ option java_package = "de.stroeer.core.v1";
 
 // Service to manage core articles
 service ArticleService {
-  /** Returns a core article by it's id
+  /**
+    ############################################################################
+    # Description
+    ############################################################################
+    Returns a core article by it's id
 
     ############################################################################
     # Status/Error scenario's
